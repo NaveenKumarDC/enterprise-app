@@ -1,2 +1,11 @@
 app.name:Enterprise Application
-spring.cloud.config.server.jasypt.password:ENC(QfE8ffXs/swl1/Bwdlf+UL9lMmGukQujcibH+kkBasMubMBz1J/L5rWXY0PeP4/+bvM+lfuWl1Uyws7UEJx9Pw==)
+spring:
+  cloud:
+    config:
+      server:
+      jasypt:
+      password: ENC(QfE8ffXs/swl1/Bwdlf+UL9lMmGukQujcibH+kkBasMubMBz1J/L5rWXY0PeP4/+bvM+lfuWl1Uyws7UEJx9Pw==)
+postgres:
+  admin:
+  # ... other properties
+    password: ENC(P//9x2tUI78RwmfSoZeyK5NgsPr9ZmOG10/Gydybg2INscrWi40qYdAKB+FK7hcnu0wh4iYJPXJR6zIeP0R8wg==)
