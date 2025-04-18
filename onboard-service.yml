@@ -1,4 +1,5 @@
-app.name:Enterprise Application
+app:
+  name: Enterprise Application
 spring:
   cloud:
     config:
