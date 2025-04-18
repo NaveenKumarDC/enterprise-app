@@ -1,1 +1,40 @@
-app.name = Enterprise Application
+# Configuration specific to the auth-service
+# This file should be stored securely in your Git config repository.
+
+spring:
+  datasource:
+    # Username should ideally match the one used for the initial schema creation if applicable
+    # Or a specific user created for this service.
+    username: enterpriseadmin
+    # --- IMPORTANT: Replace with your actual secure password ---
+    password: enterpriseadmin
+    # The URL points to the Docker service name and the common database
+    url: jdbc:postgresql://postgres:5432/enterprise_common
+
+  # JPA settings can also be overridden here if needed, but defaults from application.yml are usually fine.
+  # jpa:
+  #   hibernate:
+  #     ddl-auto: validate # More appropriate for prod than 'update'
+
+jwt:
+  # --- IMPORTANT: Replace with a strong, base64-encoded secret (at least 512 bits / 64 bytes for HS512) ---
+  # Example generated using: openssl rand -base64 64
+  secret: "40VAaf+ykMVhncSZgMHu7Xo5O5RbivisBDth+/7LK2c="
+  # Token expiration time in milliseconds
+  # 86400000 ms = 24 hours
+  # 3600000 ms = 1 hour
+  # 28800000 ms = 8 hours
+  expiration-ms: 28800000 # Example: 8 hours
+
+# Optional: Override logging levels for this service
+# logging:
+#   level:
+#     com.enterpriseapp.authservice: INFO
+#     org.springframework.security: WARN
+
+# --- Security Note ---
+# Manage your Git configuration repository permissions carefully.
+# Consider using tools like HashiCorp Vault or cloud provider secret managers
+# for managing secrets in production environments instead of storing them directly in Git.
+# Spring Cloud Config Server supports integration with Vault.
+
