@@ -1,2 +1,2 @@
-app.name = Enterprise Application
-spring.cloud.config.server.jasypt.password=ENC(QfE8ffXs/swl1/Bwdlf+UL9lMmGukQujcibH+kkBasMubMBz1J/L5rWXY0PeP4/+bvM+lfuWl1Uyws7UEJx9Pw==)
+app.name:Enterprise Application
+spring.cloud.config.server.jasypt.password:ENC(QfE8ffXs/swl1/Bwdlf+UL9lMmGukQujcibH+kkBasMubMBz1J/L5rWXY0PeP4/+bvM+lfuWl1Uyws7UEJx9Pw==)
